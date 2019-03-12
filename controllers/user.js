@@ -168,16 +168,16 @@ router.get('/sellerdashboard',(req,res)=>{
 })
 router.post('/sellerdashboard',(req,res)=>{
     var data ={
-		uid : req.session.uid,
-		
-        
+		uid :req.session.uid,
         postid:req.body.postId,
         bidmsg:req.body.bidmsg
 	};
 	
+   
+    
 	userModel.insertBid(data, function(success){
 		if(success){
-            //console.log("successful");
+            console.log("successful");
             
             
             res.redirect('/user/sellerdashboard');

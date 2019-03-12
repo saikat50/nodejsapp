@@ -111,9 +111,9 @@ module.exports={
 	},
 	insertBid: function(data, callback){
         //console.log(user);
-        var sql = "insert into bidtable values (null, ?,?,?)";
+        var sql = "insert into bidtable values (null, ?,?,?,?)";
         //console.log(data);
-		db.execute(sql, [data.postid,data.uid,data.bidmsg], function(status){
+		db.execute(sql, [data.postid,data.uid,data.bidmsg,''], function(status){
             //console.log(sql);
             //console.log(status);
 			callback(status);
